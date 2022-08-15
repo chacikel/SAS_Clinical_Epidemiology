@@ -15,7 +15,7 @@ Modifications   :
 /* line to calculate everything you need************************/
 /***************************************************************/
 
-%let path=C:\Users\cengiz.acikel\Desktop\Cengiz\ArbeitDokumente\SoftwareDocuments\SAS_documents\MyGitHub\RiskEstimationWithNullCell;
+%let path=C:\MyGitHub\RiskEstimationWithNullCell;
 
 %macro riskest (acresp, acnoresp, plcresp, plcnorsp);
 
@@ -52,8 +52,8 @@ run;
 
 Proc Freq data=Design1;
 where avalc="Resp" OR avalc="NoRe";
-table arm*Avalc/NOROW NOPERCENT	NOCUM CHISQ	RISKDIFF RELRISK SCORES=TABLE ALPHA=0.05	OUT=TableDes(LABEL="Zellenstatistiken für Avalc nach Arm");
-	OUTPUT 	CHISQ RISKDIFF 	RELRISK OUT=TblStats(LABEL="Tabellenstatistiken für Avalc nach Arm");
+table arm*Avalc/NOROW NOPERCENT	NOCUM CHISQ	RISKDIFF RELRISK SCORES=TABLE ALPHA=0.05	OUT=TableDes(LABEL="Zellenstatistiken fÃ¼r Avalc nach Arm");
+	OUTPUT 	CHISQ RISKDIFF 	RELRISK OUT=TblStats(LABEL="Tabellenstatistiken fÃ¼r Avalc nach Arm");
 weight weight;
 run;
 
